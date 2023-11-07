@@ -13,24 +13,21 @@ const Home = () => {
       intervalId = setInterval(() => {
         switch (home) {
           case "red":
-            setHome("yellow");
+            setHome("purple");
             break;
           case "yellow":
-            setHome("green");
-            break;
-          case "green":
             setHome("red");
             break;
+          case "green":
+            setHome("yellow");
+            break;
+		  case "purple":
+			setHome("green")
+			break;
 
         }
 
-        if (purpleLightOn) {
-          setLights((prevLights) =>
-            prevLights.length > 0 && prevLights[prevLights.length - 1] === "purple"
-              ? prevLights.slice(0, -1)
-              : [...prevLights, "purple"]
-          );
-        }
+
       }, 2000);
     }
 
