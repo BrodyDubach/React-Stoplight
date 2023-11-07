@@ -66,13 +66,14 @@ const Home = () => {
 		<div className={home === "purple" ? "purple light glow" : "purple light"}
           onClick={() => setHome("purple")}
         ></div>}
-      </div>
-      <button onClick={toggleInterval}>
+		      <button onClick={toggleInterval}>
         {intervalOn ? "Stop Interval" : "Start Interval"}
       </button>
       <button onClick={togglePurpleLight}>
         {purpleLightOn ? "Remove Purple Light" : "Add Purple Light"}
       </button>
+      </div>
+
     </>
   );
 };
